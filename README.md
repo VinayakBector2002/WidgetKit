@@ -16,5 +16,8 @@ Widget kit is build entirely on SwiftUI - making it cross platform.
 
 --- 
 # WidgetKit Course By [Sean Allen](https://youtu.be/jucm6e9M6LA)
-![alt text](Images/monthly-theme.jpeg)
+![monthly-theme](Images/monthly-theme.jpeg)
+![Mountain.png](Images/Mountain.png)
+![Mountain.png](Images/Roller%20Coaster.png)
+![Mountain.png](Images/Date%20with%20Icecream.png)
 But instead of hardcoding emojis and background color for each month, I have decided to generate them randomly. In the future, will let the user choose themes.
