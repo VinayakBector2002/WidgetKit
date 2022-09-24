@@ -13,3 +13,6 @@ Should project content from application than having tiny buttons!
 - Personalized
 
 Widget kit is build entirely on SwiftUI - making it cross platform.
+
+--- 
+# WidgetKit Course By [Sean Allen](https://youtu.be/jucm6e9M6LA)
