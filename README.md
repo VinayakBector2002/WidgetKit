@@ -21,4 +21,46 @@ Widget kit is build entirely on SwiftUI - making it cross platform.
 <img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Roller%20Coaster.png" width="265" height="230"/>
 <img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Date%20with%20Icecream.png" width="265" height="230"/>
 
-But instead of hardcoding emojis and background color for each month, I have decided to generate them randomly. In the future, will let the user choose themes.
+## Color and Emoji Generation 
+
+A Color was made by using Random RGB Values as follows
+
+```Swift
+
+// Keep in mind that it should be Double and NOT Int
+let redValue = Double.random(in: 1...255)
+let blueValue = Double.random(in: 1...255)
+let greenValue = Double.random(in: 1...255)
+
+// Making the Color
+let baseColor =  Color(red:redValue/255,green:greenValue/255,blue:blueValue/255)
+
+```
+
+For the text I wanted a complementory Color, which was made using the RGB values of Base Color
+
+```Swift
+
+// RBG Values of the baseColor
+func complementColorGen(red: Double, green: Double, blue: Double) -> Color {
+  // r' = max(r,b,g) + min(r,b,g) - r
+  // b' = max(r,b,g) + min(r,b,g) - b
+  // g' = max(r,b,g) + min(r,b,g) - g
+  let axis : Double = max(red,blue,green) + min(red,blue,green)
+  let redValue = axis - red
+  let blueValue = axis - blue
+  let greenValue = axis - blue
+  return Color(red:redValue/255,green:greenValue/255,blue:blueValue/255)
+}
+
+```
+
+And, for producing a random Emoji - used the following code
+
+```Swift
+
+func RandEmojGen() -> String {
+  return String(UnicodeScalar(Array(0x1F300...0x1F3F0).randomElement()!)!)
+}
+
+```
