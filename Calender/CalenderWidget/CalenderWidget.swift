@@ -43,24 +43,32 @@ struct DayEntry: TimelineEntry {
 
 struct CalenderWidgetEntryView : View {
     var entry: DayEntry
+    var config: MonthConfig
+    
+    init(entry: DayEntry) {
+        self.entry = entry
+        self.config = MonthConfig(backgroundcolor: .gray, emojiText:"🇨🇦", textColor:.black)
+    }
     var body: some View {
+        let TextColor : Color = config.textColor
+        
         ZStack{
             ContainerRelativeShape()
-                .fill(.gray.gradient)
+                .fill(config.backgroundcolor.gradient)
             VStack{
                 HStack(spacing:4){
-                    Text(String(UnicodeScalar(Array(0x1F300...0x1F3F0).randomElement()!)!))
+                    Text(config.emojiText)
                         .font(.title)
                     Text(entry.date.weekdayDisplayFormat)
                         .font(.title3)
                         .fontWeight(.bold)
                         .minimumScaleFactor(0.6)
-                        .foregroundColor(.black.opacity(0.6))
+                        .foregroundColor(TextColor.opacity(0.6))
                     Spacer()
                 }
                 Text(entry.date.dayDisplayFormat)
                     .font(.system(size:80,weight: .heavy))
-                    .foregroundColor(.black.opacity(0.6))
+                    .foregroundColor(TextColor.opacity(0.6))
             }
             .padding()
         }
