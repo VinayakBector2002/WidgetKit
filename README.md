@@ -18,7 +18,7 @@ Widget kit is build entirely on SwiftUI - making it cross platform.
 # WidgetKit Course By [Sean Allen](https://youtu.be/jucm6e9M6LA)
 ![monthly-theme](Images/monthly-theme.jpeg)
 <img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Mountain.png" width="259" height="224"/>
-<img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Mountain.png" width="259" height="224"/>
-<img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Mountain.png" width="259" height="224"/>
+<img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Roller%20Coaster.png" width="259" height="224"/>
+<img src="https://github.com/VinayakBector2002/WidgetKit/blob/main/Images/Date%20with%20Icecream.png" width="259" height="224"/>
 
 But instead of hardcoding emojis and background color for each month, I have decided to generate them randomly. In the future, will let the user choose themes.
