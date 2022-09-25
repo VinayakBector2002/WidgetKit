@@ -49,7 +49,7 @@ func complementColorGen(red: Double, green: Double, blue: Double) -> Color {
   let axis : Double = max(red,blue,green) + min(red,blue,green)
   let redValue = axis - red
   let blueValue = axis - blue
-  let greenValue = axis - blue
+  let greenValue = axis - green
   return Color(red:redValue/255,green:greenValue/255,blue:blueValue/255)
 }
 
